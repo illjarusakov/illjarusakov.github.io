@@ -1,7 +1,7 @@
 ---
 title: "Decision trees and the Evasiveness Conjecture"
 collection: talks
-type: "Seminar: Graphs, Groups, Topology and Computational Complexity, Prof. Clara Löh"
+venue: "Seminar: Graphs, Groups, Topology and Computational Complexity, Prof. Clara Löh"
 date: 2024-10-16
 location: "Regensburg, Germany"
 ---
