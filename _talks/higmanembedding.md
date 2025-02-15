@@ -1,7 +1,7 @@
 ---
 title: "The Higman Embedding Theorem"
 collection: talks
-type:
+type: "Seminar: Decision Problems in Groups, Prof. Dr. Clara Löh"
 venue: "Seminar: Decision Problems in Groups, Prof. Dr. Clara Löh"
 date: 2024-01-17
 location: "Regensburg, Germany"
