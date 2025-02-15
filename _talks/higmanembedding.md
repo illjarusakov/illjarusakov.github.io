@@ -4,7 +4,7 @@ collection: talks
 type: "Seminar: Decision Problems in Groups, Prof. Dr. Clara Löh"
 venue: "University of Regensburg"
 date: 2024-01-17
-location: "Regensburg, Germany"
+location: "Germany"
 ---
 
  In the 1960s, Graham Higman discovered a celebrated result now known as
