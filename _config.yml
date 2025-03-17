@@ -12,7 +12,7 @@ show_excerpts: false   # set to true to show excerpts on the homepage
 
 miniscule:
   date_format: "%b %-d, %Y"
-  one_page_header: true 
+  one_page_header: false 
   slide_out_footer: false
   custom_home_footer: false
 
