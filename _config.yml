@@ -1,9 +1,9 @@
-title: miniscule.
+title: Illja Rusakov.
 description: > # this means to ignore newlines until "show_excerpts:"
   a clean and light jekyll theme
 
 author:
-  name: filbert phang
+  name: Illja Rusakov
 
 collections:
   - features
@@ -18,8 +18,8 @@ miniscule:
 
   # generate social links in footer
   social_links:
-    twitter: jekyllrb
-    github:  "filbertphang/miniscule"
+    # twitter: jekyllrb
+    # github:  "filbertphang/miniscule"
     # devto: jekyll
     # dribbble: jekyll
     # facebook: jekyll
@@ -30,11 +30,11 @@ miniscule:
     # youtube: jekyll
     # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
     # youtube_channel_name: CloudCannon
-    telegram: jekyll
+    # telegram: jekyll
     # googleplus: +jekyll
     # microdotblog: jekyll
     # keybase: jekyll
-    email: name@domain.com
+    # email: name@domain.com
 
     # Mastodon instances
     # mastodon:
