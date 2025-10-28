@@ -147,23 +147,19 @@
     <img id="profilePhoto" src="rusakov_square.jpg" alt="Illja Rusakov"
          style="width:100%; height:auto; display:block;">
     <figcaption style="font-size:0.85em; text-align:center; color:#555; margin-top:0.3rem;">
-      Illja Rusakov
+      Illja Rusakov —
+      <span style="color:#0056b3; text-decoration:underline; cursor:pointer;"
+            onclick="swapPhoto()">change photo</span>
     </figcaption>
-    <button
-      style="display:block; margin:0.4rem auto; padding:0.3rem 0.6rem;
-             font-size:0.9em; cursor:pointer;"
-      onclick="swapPhoto()">
-      Change Photo
-    </button>
   </figure>
 
   <div class="text">
     <h2>Illja Rusakov</h2>
-    I am a first-year PhD student in the
+    I am a first-year PhD student at the
     <a href="https://www.mis.mpg.de/career/imprs">
-      International Max Planck Research School Mathematics in the Sciences
+      International Max Planck Research School Mathematics in the Sciences (IMPRS MiS)
     </a>
-    at the University of Leipzig, supervised by <a href="https://www.math.uni-leipzig.de/~grabowski/"> Prof. &#321;ukasz&nbsp;Grabowski</a>. 
+    at the University of Leipzig.
   </div>
 </div>
 
@@ -171,11 +167,7 @@
   let toggled = false;
   function swapPhoto() {
     const img = document.getElementById("profilePhoto");
-    if (!toggled) {
-      img.src = "rusakov_alternate.jpg";  // path to alternate image
-    } else {
-      img.src = "rusakov_square.jpg";
-    }
+    img.src = toggled ? "rusakov_square.jpg" : "rusakov_alternate.jpg";
     toggled = !toggled;
   }
 </script>
