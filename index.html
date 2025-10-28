@@ -140,48 +140,8 @@
     </style>
   </head>
 
-<script>
-(function(){
-  const supported = ['en','de','th'];
-  function applyLanguage(lang){
-    if (!supported.includes(lang)) return;
-    // content replacements (innerHTML)
-    document.querySelectorAll('*').forEach(el=>{
-      // content translation: data-<lang>
-      const txt = el.getAttribute('data-' + lang);
-      if (txt !== null) el.innerHTML = txt;
-
-      // attribute translations: look for common attributes
-      ['title','placeholder','alt','value'].forEach(attr=>{
-        const key = 'data-' + lang + '-' + attr;
-        const val = el.getAttribute(key);
-        if (val !== null) {
-          if (attr === 'value' && ('value' in el)) el.value = val;
-          else el.setAttribute(attr, val);
-        }
-      });
-    });
-    localStorage.setItem('site_lang', lang);
-  }
-
-  // exported function for onclick handlers
-  window.setLanguage = applyLanguage;
-
-  // init on load: try localStorage, fallback to browser language, else 'en'
-  const saved = localStorage.getItem('site_lang');
-  const browser = (navigator.language || navigator.userLanguage || '').slice(0,2);
-  const initial = saved || (supported.includes(browser) ? browser : 'en');
-  document.addEventListener('DOMContentLoaded', ()=> applyLanguage(initial));
-})();
-</script>
-
   <body>
 
-<div id="lang-switch" style="position:fixed;top:10px;right:10px;display:flex;gap:8px;">
-  <img src="flag_en.png" alt="EN" onclick="setLanguage('en')" style="cursor:pointer;width:28px">
-  <img src="flag_de.png" alt="DE" onclick="setLanguage('de')" style="cursor:pointer;width:28px">
-  <img src="flag_th.png" alt="TH" onclick="setLanguage('th')" style="cursor:pointer;width:28px">
-</div>
 
 <div class="image-text">
   <figure style="width:35%; margin:0;">
@@ -195,7 +155,6 @@
     </figcaption>
   </figure>
 
-<!--
   <div class="text" data-en="I am a PhD student at IMPRS MiS."
    data-de="Ich bin Doktorand an der IMPRS MiS."
    data-th="Je suis doctorant à l'IMPRS MiS.">
@@ -208,30 +167,6 @@
     </a>
   </div>
 </div>
--->
-
-<div class="text">
-  <h2>Illja Rusakov</h2>
-  <p>
-    I am a first-year PhD student at 
-    <span class="lang-text" data-en="Leipzig University" data-de="Universität Leipzig" data-th="มหาวิทยาลัยไลพ์ซิก">
-      Leipzig University
-    </span>,
-    supervised by 
-    <a href="https://www.math.uni-leipzig.de/~grabowski/">
-      Prof. &#321;ukasz&nbsp;Grabowski
-    </a>.
-    I am a member and funded by the 
-    <a href="https://www.mis.mpg.de/career/imprs">
-      <span class="lang-text" data-en="International Max Planck Research School Mathematics in the Sciences"
-            data-de="International Max-Planck-Forscherschule Mathematik in den Wissenschaften"
-            data-th="โรงเรียนวิจัยนานาชาติแมกซ์พลังค์ ด้านคณิตศาสตร์ในวิทยาศาสตร์">
-        International Max Planck Research School Mathematics in the Sciences
-      </span>
-    </a>.
-  </p>
-</div>
-
 
 <script>
   let toggled = false;
@@ -279,21 +214,6 @@
       </small>
     </footer>
     -->
-
-	<script>
-function setLanguage(lang) {
-  localStorage.setItem('lang', lang);
-  document.querySelectorAll('.lang-text').forEach(el => {
-    const text = el.getAttribute(`data-${lang}`);
-    if (text) el.textContent = text;
-  });
-}
-
-window.onload = function() {
-  const savedLang = localStorage.getItem('lang') || 'en';
-  setLanguage(savedLang);
-};
-</script>
 	
   </body>
 </html>
