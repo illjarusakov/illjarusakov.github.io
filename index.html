@@ -142,7 +142,7 @@
 
 	<script>
 (function(){
-  const supported = ['en','de','fr'];
+  const supported = ['en','de','th'];
   function applyLanguage(lang){
     if (!supported.includes(lang)) return;
     // content replacements (innerHTML)
@@ -179,8 +179,8 @@
 
 <div id="lang-switch" style="position:fixed;top:10px;right:10px;display:flex;gap:8px;">
   <img src="flag_en.png" alt="EN" onclick="setLanguage('en')" style="cursor:pointer;width:28px">
-  <img src="flag_en.png" alt="DE" onclick="setLanguage('de')" style="cursor:pointer;width:28px">
-  <img src="flag_en.png" alt="FR" onclick="setLanguage('fr')" style="cursor:pointer;width:28px">
+  <img src="flag_de.png" alt="DE" onclick="setLanguage('de')" style="cursor:pointer;width:28px">
+  <img src="flag_th.png" alt="TH" onclick="setLanguage('th')" style="cursor:pointer;width:28px">
 </div>
 
 <div class="image-text">
