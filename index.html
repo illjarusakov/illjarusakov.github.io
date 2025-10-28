@@ -151,7 +151,7 @@
   </figure>
   <div class="text">
     <h2>Illja Rusakov</h2>
-    I am a first-year PhD student at the
+    I am a first-year PhD student in the
     <a href="https://www.mis.mpg.de/career/imprs">
       International Max Planck Research School Mathematics in the Sciences
     </a>
@@ -162,6 +162,43 @@
   <section>
       <h2>Accordions</h2>
       <details>
+	  <div class="image-text">
+  <figure style="width:35%; margin:0;">
+    <img id="profilePhoto" src="rusakov_square.jpg" alt="Illja Rusakov"
+         style="width:100%; height:auto; display:block;">
+    <figcaption style="font-size:0.85em; text-align:center; color:#555; margin-top:0.3rem;">
+      Illja Rusakov
+    </figcaption>
+    <button
+      style="display:block; margin:0.4rem auto; padding:0.3rem 0.6rem;
+             font-size:0.9em; cursor:pointer;"
+      onclick="swapPhoto()">
+      Change Photo
+    </button>
+  </figure>
+
+  <div class="text">
+    <h2>Illja Rusakov</h2>
+    I am a first-year PhD student at the
+    <a href="https://www.mis.mpg.de/career/imprs">
+      International Max Planck Research School Mathematics in the Sciences (IMPRS MiS)
+    </a>
+    at the University of Leipzig.
+  </div>
+</div>
+
+<script>
+  let toggled = false;
+  function swapPhoto() {
+    const img = document.getElementById("profilePhoto");
+    if (!toggled) {
+      img.src = "rusakov_alternate.jpg";  // path to alternate image
+    } else {
+      img.src = "rusakov_square.jpg";
+    }
+    toggled = !toggled;
+  }
+</script>
         <summary>Accordion 1</summary>
         <p>Lorem ipsum dolor sit amet.</p>
       </details>
