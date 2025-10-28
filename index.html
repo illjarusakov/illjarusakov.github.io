@@ -210,6 +210,14 @@
       </small>
     </footer>
     -->
-	
+	<footer style="text-align:center; font-size:0.85rem; color:#555; margin:2rem 0;">
+  Last updated on <span id="lastUpdated"></span>
+</footer>
+
+<script>
+  // Automatically fill in today's date or last modification date
+  const lastMod = new Date(document.lastModified);
+  document.getElementById('lastUpdated').textContent = lastMod.toLocaleDateString();
+</script>
   </body>
 </html>
