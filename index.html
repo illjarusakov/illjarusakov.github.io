@@ -1,180 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="auto">
-    <title>Illja Rusakov</title>
-    <meta name="description" content="Mathematician.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f8f9fa;
+        color: #222;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.6;
+      }
+
+      header,
+      section,
+      footer,
+      div.container {
+        width: 90%;
+        max-width: 900px; /* adjust this number for how centered/narrow you want */
+        margin: 1.5rem auto;
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 0.75rem;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f0f0f0;
+      }
+
+      details {
+        margin-top: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 0.5rem 1rem;
+        background-color: #fafafa;
+      }
+
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #666;
+        background: none;
+        box-shadow: none;
+      }
+
+      a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
 
   <body>
-    <!-- Header -->
-    <header class="container">
-      <hgroup>
-        <h1>Pico</h1>
-        <p>A pure HTML example, without dependencies.</p>
-      </hgroup>
-    </header>
-    <!-- ./ Header -->
+    <!-- Tables -->
+    <section id="tables">
+      <h2>Tables</h2>
+      <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Header</th>
+              <th scope="col">Header</th>
+              <th scope="col">Header</th>
+              <th scope="col">Header</th>
+              <th scope="col">Header</th>
+              <th scope="col">Header</th>
+              <th scope="col">Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+              <td>Cell</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- ./ Tables -->
 
-    <!-- Main -->
-    <main class="container">
-      <!-- Preview -->
-      <section id="preview">
-        <h2>Preview</h2>
-        <p>
-          Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla
-          iaculis eros a elit pharetra egestas.
-        </p>
-      </section>
-      <!-- ./ Preview -->
-      
-        <!-- Lists-->
-        <h3>Lists</h3>
+    <!-- Accordions -->
+    <section id="accordions">
+      <h2>Accordions</h2>
+      <details>
+        <summary>Accordion 1</summary>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </details>
+      <details open>
+        <summary>Accordion 2</summary>
         <ul>
-          <li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
+          <li>Vestibulum id elit quis massa interdum sodales.</li>
         </ul>
-
-        <!-- Inline text elements
-        <h3>Inline text elements</h3>
-        <div class="grid">
-          <p><a href="#" onclick="event.preventDefault()">Primary link</a></p>
-          <p>
-            <a href="#" class="secondary" onclick="event.preventDefault()">Secondary link</a>
-          </p>
-          <p>
-            <a href="#" class="contrast" onclick="event.preventDefault()">Contrast link</a>
-          </p>
-        </div>
-        <div class="grid">
-          <p><strong>Bold</strong></p>
-          <p><em>Italic</em></p>
-          <p><u>Underline</u></p>
-        </div>
-        <div class="grid">
-          <p><del>Deleted</del></p>
-          <p><ins>Inserted</ins></p>
-          <p><s>Strikethrough</s></p>
-        </div>
-        <div class="grid">
-          <p><small>Small </small></p>
-          <p>Text <sub>Sub</sub></p>
-          <p>Text <sup>Sup</sup></p>
-        </div>
-        <div class="grid">
-          <p>
-            <abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr>
-          </p>
-          <p><kbd>Kbd</kbd></p>
-          <p><mark>Highlighted</mark></p>
-        </div> 
-       -->
-
-        <!-- Headings-->
-        <h3>Heading 3</h3>
-        <p>
-          Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur
-          sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti
-          sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        </p>
-
-        <!-- Medias
-        <figure>
-          <img
-            src="img/aleksandar-jason-a562ZEFKW8I-unsplash-2000x1000.jpg"
-            alt="Minimal landscape"
-          >
-          <figcaption>
-            Image from
-            <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank">unsplash.com</a>
-          </figcaption>
-        </figure>
-      </section>
-      Typography-->
-
-      <!-- Tables
-      <section id="tables">
-        <h2>Tables</h2>
-        <div class="overflow-auto">
-          <table class="striped">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-                <th scope="col">Heading</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-                <td>Cell</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      Tables -->
-
-      <!-- Accordions -->
-      <section id="accordions">
-        <h2>Accordions</h2>
-        <details>
-          <summary>Accordion 1</summary>
-          <p>
-            Lorem ipsum dolor sit amet.
-          </p>
-        </details>
-        <details open>
-          <summary>Accordion 2</summary>
-          <ul>
-            <li>Vestibulum id elit quis massa interdum sodales.</li>
-          </ul>
-        </details>
-      </section>
-      <!-- ./ Accordions -->
+      </details>
+    </section>
+    <!-- ./ Accordions -->
 
     <!-- Footer -->
     <footer class="container">
       <small
-        >Built with <a href="https://picocss.com">Pico</a> •
-        <a href="https://github.com/picocss/examples/blob/master/v2-html/index.html"
-          >Source code</a
+        >Built without PicoCSS •
+        <a
+          href="https://github.com/picocss/examples/blob/master/v2-html/index.html"
+          >Original source</a
         ></small
       >
     </footer>
     <!-- ./ Footer -->
-
   </body>
 </html>
