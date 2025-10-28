@@ -140,7 +140,48 @@
     </style>
   </head>
 
+	<script>
+(function(){
+  const supported = ['en','de','fr'];
+  function applyLanguage(lang){
+    if (!supported.includes(lang)) return;
+    // content replacements (innerHTML)
+    document.querySelectorAll('*').forEach(el=>{
+      // content translation: data-<lang>
+      const txt = el.getAttribute('data-' + lang);
+      if (txt !== null) el.innerHTML = txt;
+
+      // attribute translations: look for common attributes
+      ['title','placeholder','alt','value'].forEach(attr=>{
+        const key = 'data-' + lang + '-' + attr;
+        const val = el.getAttribute(key);
+        if (val !== null) {
+          if (attr === 'value' && ('value' in el)) el.value = val;
+          else el.setAttribute(attr, val);
+        }
+      });
+    });
+    localStorage.setItem('site_lang', lang);
+  }
+
+  // exported function for onclick handlers
+  window.setLanguage = applyLanguage;
+
+  // init on load: try localStorage, fallback to browser language, else 'en'
+  const saved = localStorage.getItem('site_lang');
+  const browser = (navigator.language || navigator.userLanguage || '').slice(0,2);
+  const initial = saved || (supported.includes(browser) ? browser : 'en');
+  document.addEventListener('DOMContentLoaded', ()=> applyLanguage(initial));
+})();
+</script>
+
   <body>
+
+<div id="lang-switch" style="position:fixed;top:10px;right:10px;display:flex;gap:8px;">
+  <img src="flag_en.png" alt="EN" onclick="setLanguage('en')" style="cursor:pointer;width:28px">
+  <img src="flag_en.png" alt="DE" onclick="setLanguage('de')" style="cursor:pointer;width:28px">
+  <img src="flag_en.png" alt="FR" onclick="setLanguage('fr')" style="cursor:pointer;width:28px">
+</div>
 
 <div class="image-text">
   <figure style="width:35%; margin:0;">
@@ -179,11 +220,11 @@
   <div style="display: grid; grid-template-columns: 90px auto; row-gap: 0.3rem; text-align: left;">
     <div><b>Email:</b></div>
     <div>first.lastname{a}yahoo.de</div>
-    <div><b>Address:</b></div>
+    <div><b>Office:</b></div>
     <div>
-      A523, Neues Augusteum <br>
-	  Augustusplatz 10,<br>
-      Mathematisches Institut,<br>
+      A523 <br>
+	  Augustusplatz 10<br>
+      Mathematisches Institut<br>
       Universität Leipzig.
     </div>
   </div>
