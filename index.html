@@ -145,13 +145,13 @@
 
 <div class="image-text">
   <figure style="width:35%; margin:0;">
-    <img id="profilePhoto" src="rusakov_square.jpg" alt="Illja Rusakov"
+    <img id="profilePhoto" src="rusakov_alternate.jpg" alt="Illja Rusakov"
          style="width:100%; height:auto; display:block;">
     <figcaption style="font-size:0.85em; text-align:center; color:#555; margin-top:0.3rem;">
-      Archives of the Mathematisches Forschungsinstitut Oberwolfach. <br> 
+      <!-- Archives of the Mathematisches Forschungsinstitut Oberwolfach. <br> 
       <span style="color:#0056b3; text-decoration:underline; cursor:pointer;"
             onclick="swapPhoto()">Click here</span>
-		for a more casual photo.
+		for a more casual photo. -->
     </figcaption>
   </figure>
 
@@ -159,10 +159,10 @@
     <h2>Illja Rusakov</h2>
 	<p> <!-- <p style="margin-bottom: 20px;"> -->
     I am currently a first-year PhD student at Leipzig University under the supervision of <a href="https://www.math.uni-leipzig.de/~grabowski/"> Prof. &#321;ukasz&nbsp;Grabowski</a>.
-	I am a member and funded by the 
+	I am a member of the 
     <a href="https://www.mis.mpg.de/career/imprs">
     International Max Planck Research School Mathematics in the Sciences.</a><br></p>
-	<p> In 2025, I completed my Master's degree in Mathematics at the University of Regensburg. My Master's thesis written under the supervision of 
+	<p> In 2025, I completed my Master's degree in Mathematics at the University of Regensburg. My thesis written under the supervision of 
 	<a href="https://loeh.app.uni-regensburg.de/"> Prof. Clara&nbsp;Löh</a> is titled <em>Logarithmic Torsion Homology Growth and Computability</em>.</p>
   </div>
 </div>
@@ -171,7 +171,7 @@
   let toggled = false;
   function swapPhoto() {
     const img = document.getElementById("profilePhoto");
-    img.src = toggled ? "rusakov_square.jpg" : "rusakov_alternate.jpg";
+    img.src = toggled ? "rusakov_alternate.jpg" : "rusakov_square.jpg";
     toggled = !toggled;
   }
 </script>
