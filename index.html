@@ -133,16 +133,17 @@
       </div> 
     </section>
     
-    <footer style="text-align:center; font-size:0.85rem; color:#555; margin:2rem 0;">
-  Слава Україні! Last updated on <span id="lastUpdated"></span>.
-</footer>
+  <footer style="text-align:center; font-size:0.85rem; color:#555; margin:2rem 0;">
+    Слава Україні! Last updated on <span id="lastUpdated"></span>.
+  </footer>
 
-<script>
-  const lastMod = new Date(document.lastModified);
-  const day = String(lastMod.getDate()).padStart(2, '0');
-  const month = String(lastMod.getMonth() + 1).padStart(2, '0'); // months are 0-based
-  const year = lastMod.getFullYear();
-  document.getElementById('lastUpdated').textContent = `${day}.${month}.${year}`;
-</script>
+  <script>
+    const lastMod = new Date(document.lastModified);
+    const day = String(lastMod.getDate()).padStart(2, '0');
+    const month = String(lastMod.getMonth() + 1).padStart(2, '0'); // months are 0-based
+    const year = lastMod.getFullYear();
+    document.getElementById('lastUpdated').textContent = `${day}.${month}.${year}`;
+  </script>
+    
   </body>
 </html>
